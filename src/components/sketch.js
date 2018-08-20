@@ -3,6 +3,7 @@ export default function (P5) {
   let width = 0;
   let height = 0;
   P5.setup = function () {
+    // TODO try to avoid using getElementById
     width = document.getElementById('sketch').clientWidth;
     height = document.getElementById('sketch').clientHeight;
     P5.createCanvas(width, height);
