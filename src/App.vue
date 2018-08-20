@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <HelloP5 msg="Welcome to P5.js Sketch board"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import HelloP5 from './components/HelloP5.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    HelloP5,
   },
 };
 </script>
