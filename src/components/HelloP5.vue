@@ -7,8 +7,29 @@
 </template>
 
 <script>
+/* eslint no-param-reassign: ["error", { "props": false }] */
 import P5 from 'p5';
-import sketch from './sketch';
+// import sketch from './sketch';
+// https://github.com/processing/p5.js/wiki/Global-and-instance-mode
+
+const sketch = function (p) {
+  const x = 100;
+  const y = 100;
+
+  p.setup = function () {
+    // TODO try to avoid using getElementById
+    const width = document.getElementById('sketch').clientWidth;
+    const height = document.getElementById('sketch').clientHeight;
+    p.createCanvas(width, height);
+    p.colorMode(P5.RGB, 255, 255, 255, 1);
+  };
+
+  p.draw = function () {
+    p.background(0);
+    p.fill(255);
+    p.rect(x, y, 50, 50);
+  };
+};
 
 
 export default {
